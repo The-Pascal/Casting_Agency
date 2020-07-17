@@ -24,7 +24,7 @@ class CastingAgencyTestCase(unittest.TestCase):
             self.db.init_app(self.app)
             # create all tables
             self.db.create_all()
-    
+
     def tearDown(self):
         """Executed after reach test"""
         pass
@@ -33,14 +33,14 @@ class CastingAgencyTestCase(unittest.TestCase):
     TEST CASES STARTS HERE
     """
 
-    #TEST for successfully getting movies
+    # TEST for successfully getting movies
     def test_get_movies(self):
         res = self.client().get("/movies")
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 200)
-        self.assertEqual(data["success"],True)
-        self.assertTrue(data["Total number of movies"]>0)
+        self.assertEqual(data["success"], True)
+        self.assertTrue(data["Total number of movies"] > 0)
 
     # #TEST for successfully getting actors
     def test_get_actors(self):
@@ -48,15 +48,14 @@ class CastingAgencyTestCase(unittest.TestCase):
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 200)
-        self.assertEqual(data["success"],True)
-        self.assertTrue(data["Total number of actors"]>0)
-
+        self.assertEqual(data["success"], True)
+        self.assertTrue(data["Total number of actors"] > 0)
 
     # TEST post a new movie
     def test_post_new_movie(self):
 
         new_movie = {
-            'title' : 'Universe',
+            'title': 'Universe',
             'release': '2010-10-13',
         }
 
@@ -65,7 +64,7 @@ class CastingAgencyTestCase(unittest.TestCase):
 
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
-        self.assertTrue(len(data['movie added'])>0)
+        self.assertTrue(len(data['movie added']) > 0)
 
     # TEST for 400 status code for missing title of movie
     def test_400_new_movie(self):
@@ -79,12 +78,11 @@ class CastingAgencyTestCase(unittest.TestCase):
 
         self.assertEqual(res.status_code, 200)
 
-
     # TEST post a new actor
     def test_post_new_actor(self):
 
         new_actor = {
-            'name' : 'Robert Downey Jr',
+            'name': 'Robert Downey Jr',
             'age': 44,
             'gender': 'Male',
             'movie_id': 4
@@ -101,7 +99,7 @@ class CastingAgencyTestCase(unittest.TestCase):
     def test_400_new_actor(self):
 
         new_actor = {
-            'name' : 'Robert Downey Jr',
+            'name': 'Robert Downey Jr',
             'gender': 'Male',
             'movie_id': 4
         }
@@ -111,7 +109,6 @@ class CastingAgencyTestCase(unittest.TestCase):
 
         self.assertEqual(res.status_code, 200)
 
-
     # TEST for change details of already present movie
     def test_patch_movie(self):
 
@@ -119,7 +116,7 @@ class CastingAgencyTestCase(unittest.TestCase):
             'title': "The THOR",
             'release': "2014-12-05"
         }
-        
+
         res = self.client().patch("/movies/5", json=movie_details)
         data = json.loads(res.data)
 
@@ -127,7 +124,7 @@ class CastingAgencyTestCase(unittest.TestCase):
         self.assertEqual(data["success"], True)
         self.assertEqual(data["message"], "update successfull")
 
-    #TEST for movie not found while patching
+    # TEST for movie not found while patching
     def test_400_movie_not_present_for_patching(self):
         movie_details = {
             'title': "The THOR",
@@ -139,17 +136,16 @@ class CastingAgencyTestCase(unittest.TestCase):
 
         self.assertEqual(res.status_code, 200)
 
-
     # TEST for change details of already present actor
     def test_patch_actor(self):
 
         patch_actor = {
-            'name' : 'John Doe',
-            'age':24,
+            'name': 'John Doe',
+            'age': 24,
             'gender': 'Male',
             'movie_id': 2
         }
-        
+
         res = self.client().patch("/actors/5", json=patch_actor)
         data = json.loads(res.data)
 
@@ -157,11 +153,11 @@ class CastingAgencyTestCase(unittest.TestCase):
         self.assertEqual(data["success"], True)
         self.assertEqual(data["message"], "update successfull")
 
-    #TEST for actor not found while patching
+    # TEST for actor not found while patching
     def test_400_actor_not_present_for_patching(self):
         patch_actor = {
-            'name' : 'John Doe',
-            'age':24,
+            'name': 'John Doe',
+            'age': 24,
             'gender': 'Male',
             'movie_id': 2
         }
@@ -185,8 +181,8 @@ class CastingAgencyTestCase(unittest.TestCase):
 
         self.assertEqual(res.status_code, 200)
 
-
     # TEST for deleting a specific movie
+
     def test_delete_movie(self):
         res = self.client().delete("/movies/5")
         data = json.loads(res.data)

@@ -10,7 +10,7 @@ AUTH0_DOMAIN = os.environ['AUTH0_D']
 ALGORITHMS = [os.environ['AUTH0_ALGO']]
 API_AUDIENCE = os.environ['AUTH0_API']
 
-## AuthError Exception
+# AuthError Exception
 '''
 AuthError Exception
 '''
@@ -20,14 +20,15 @@ class AuthError(Exception):
         self.status_code = status_code
 
 
-## Auth Header
+# Auth Header
 
 def get_token_auth_header():
     if "Authorization" in request.headers:
         auth_header = request.headers["Authorization"]
         if auth_header:
             bearer_token_array = auth_header.split(' ')
-            if bearer_token_array[0] and bearer_token_array[0].lower() == "bearer" and bearer_token_array[1]:
+            if bearer_token_array[0] and bearer_token_array[0].lower(
+            ) == "bearer" and bearer_token_array[1]:
                 return bearer_token_array[1]
     raise AuthError({
         'success': False,
@@ -35,9 +36,12 @@ def get_token_auth_header():
         'error': 401
     }, 401)
 
+
 '''
 It will check if the required permission is in payload or not
 '''
+
+
 def check_permissions(permission, payload):
     if "permissions" in payload:
         if permission in payload['permissions']:
