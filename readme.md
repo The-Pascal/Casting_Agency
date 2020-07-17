@@ -1,9 +1,9 @@
-#CASTING AGENCY
+# CASTING AGENCY
 The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies.
 
 **Application URL - https://casting-agency-12345.herokuapp.com/**
 
-######JWT Tokens:
+###### JWT Tokens:
 
 - Casting Assistant
 eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjJkVnBmeHE5RS0xS1paSlNTQVU5QiJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOGI5c210aC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDU2ODA5NDE5Njc3NjM2NjUzMTYiLCJhdWQiOlsibXlhcHAiLCJodHRwczovL2Rldi1xOGI5c210aC51cy5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTk0OTYyNzE4LCJleHAiOjE1OTUwNDkxMTgsImF6cCI6IkpaTUMzNzBXYmNnNVphUW9LU0l4a1FPeW9iTVcwRVVvIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwic2VhcmNoOmFjdG9ycyIsInNlYXJjaDptb3ZpZXMiXX0.MuRbpTp6rXMdJgIbMtUMYv7zZUn2-785XQG2UqYQzz7mhsxMXgmJDECx66xK5AbSQuuVC_03NwYKvPjYwkOqvz5ggvDKRtzQNi8bylsLIXg1xI6Y1NJkAibTbaLyHBUuuC_jlcVdlDezFc4-ZCxNWlZGEqY64CAsFU3NxCXGMI14G-Uc4xLmgIqW2G7gLOiRq5-mJMcOMPq1IyKEslqS0JaXY4h-mbXZFoR7EWmdldxVjIIf7aTGnDx4ayBeZNdgPh3uTVHToBoyJWolQ9RDtDSEsuEEZt7TqNpp3XHKjbswB6DZbRptN6xeTfZ8OPc6e81B9AWkJbacGqQqaIu_EA
@@ -16,16 +16,16 @@ eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjJkVnBmeHE5RS0xS1paSlNTQVU5QiJ9.eyJ
 eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjJkVnBmeHE5RS0xS1paSlNTQVU5QiJ9.eyJpc3MiOiJodHRwczovL2Rldi1xOGI5c210aC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDE1Mzg4MDU0Nzc3MzQ4ODAyMDEiLCJhdWQiOlsibXlhcHAiLCJodHRwczovL2Rldi1xOGI5c210aC51cy5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNTk0OTYyODM3LCJleHAiOjE1OTUwNDkyMzcsImF6cCI6IkpaTUMzNzBXYmNnNVphUW9LU0l4a1FPeW9iTVcwRVVvIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCIsInBlcm1pc3Npb25zIjpbImRlbGV0ZTphY3RvcnMiLCJkZWxldGU6bW92aWVzIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvcnMiLCJwYXRjaDptb3ZpZXMiLCJwb3N0OmFjdG9ycyIsInBvc3Q6bW92aWVzIiwic2VhcmNoOmFjdG9ycyIsInNlYXJjaDptb3ZpZXMiXX0.orSa4uybbWvQ2m4TO7wFZ0gaaovySi9D7RxyPWMRjAArzHRc8gtavGpq1Qmoc2_bjAtb8kN7yMRErXzPVqqfjIz7EEYm-Gxv3j3X94dnTcvRvyvcUXg3DZoUpTkvxzM1Au6cSeey0T_hHdY65INPwWu8L09-4gsNtqTiCMBZRpa-3fw-d3mm2KsraDHRfT_vECHTjrpoJT-sWqKMuF-eObKFWcFcV4qDMn6czCHsCAFxHHC7WGdZUDqggQzJzluBS4g_KWAHvRm-etYESM02PNtubIrxALLweuvmSE4aWcBXUEG-7NsJdijij96iKEGdgWng7C0zIqAXgq2-knnj2w
 
 
-##Project Details:
+## Project Details:
 
 The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies.
 
-######Models:
+###### Models:
 
 - Movies with attributes title and release date
 - Actors with attributes name, age and gender
 
-######Roles:
+###### Roles:
 
 - Casting Assistant
     "get:actors",
@@ -53,9 +53,9 @@ The Casting Agency models a company that is responsible for creating movies and 
 
 
 
-##API DOCUMENTATION
+## API DOCUMENTATION
 
-######Endpoints
+###### Endpoints
 - GET '/movies' - used to get all movies
 - GET "/actors" - used to get all actors
 - POST "/movies" - used to add more movies
