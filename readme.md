@@ -71,7 +71,7 @@ GET '/movies'
 - Request Arguments: None
 - Permission: required
 - Returns:
-''' 
+``` 
 {
     "Total number of movies": 1,
     "movies": [
@@ -84,7 +84,7 @@ GET '/movies'
     ],
     "success": true
 }
-'''
+```
 
 
 GET "/actors"
@@ -92,7 +92,7 @@ GET "/actors"
 - Request Arguments: None
 - Permission: required
 - Returns:
-'''
+```
 {
     "All Actors": [
         {
@@ -105,7 +105,7 @@ GET "/actors"
     "Total number of actors": 0,
     "success": true
 }
-'''
+```
 
 POST "/movies"
 - Adds a new movie to the database
@@ -114,7 +114,7 @@ POST "/movies"
     - release : releasing date of movie
 - Permission: required
 - Returns :
-'''
+```
 {
     "message": "movie added successfully",
     "movie added": {
@@ -125,7 +125,7 @@ POST "/movies"
     },
     "success": true
 }
-'''
+```
 
 POST "/actors"
 - Adds a new actor to the database
@@ -136,7 +136,7 @@ POST "/actors"
     - movie_id : movie to which actor is related
 - Permission: required
 - Returns :
-'''
+```
 {
     "actor added": {
         "age": 44,
@@ -148,14 +148,14 @@ POST "/actors"
     "message": "actor added successfully",
     "success": true
 }
-'''
+```
 
 PATCH "/movies/int:movie_id"
 - Used to change details of a specific movie
 - Request Parameters: Present
     movie_id: movie ID needed to be changed
 - Returns :
-'''
+```
 {
     "success": True,
     "message": "update successfull",
@@ -166,14 +166,14 @@ PATCH "/movies/int:movie_id"
         "title": "Son of Justice"
     }
 }
-'''
+```
 
 PATCH "/actors/int:actor_id"
 - Used to change details of a specific actor
 - Request Parameters: Present
     actor_id: actor ID needed to be changed
 - Returns :
-'''
+```
 {
     "actor changed to ":{
         "age": 32,
@@ -185,29 +185,29 @@ PATCH "/actors/int:actor_id"
     "success": True,
     "message": "update successfull",
 }
-'''
+```
 
 DELETE "/movies/int:movie_id"
 - Delete a specific movie from database
 - Request Arguments: Present
     movie_id: ID of the movie
 - Response Body:
-'''
+```
 {
     'success': True,
     'deleted': 5
 }
-'''
+```
 
 DELETE "/actors/int:actor_id"
 - Delete a specific actor from database
 - Request Arguments: Present
     actor_id: ID of the actor
 - Response Body:
-'''
+```
 {
     'success': True,
     'deleted': 5
 }
-'''
+```
 
