@@ -8,7 +8,7 @@ Babel==2.8.0
 certifi==2019.9.11
 Click==7.0
 Flask==1.1.1
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 Flask-Migrate==2.5.2
 Flask-Script==2.0.6
 Flask-SQLAlchemy==2.4.1
